@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Write a JavaScript program that will create pull-down menu with three
+    options. Once the user will select the one of the options then user will redirected
+    to that website
+    <script language="javascript" type="text/javascript">
+        function getPage(choice) {
+            page = choice.options[choice.selectedIndex].value;
+            if (page != "") {
+                window.location = page;
+            }
+        }
+    </script>
+    <form name="myform" action="" method="post">
+        Select Your Favourite Website:
+        <select name="MenuChoice" onchange="getPage(this)">
+            <option value="select any option">Select</option>
+            <option value="https://www.codecademy.com/catalog/language/javascript/">
+                CodeAcademy </option>
+            <option value="https://www.msbte.org.in">MSBTE</option>
+            <option value="https://www.javatpoint.com/javascript-tutorial">JavaTpoint</option>
+    </form>
+</body>
+
+</html>
