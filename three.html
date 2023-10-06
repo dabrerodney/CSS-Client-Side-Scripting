@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Getter and Setter <br>
+    <script>
+        var car = {
+            brand: "Toyota",
+            color: "Blue",
+
+            get getBrand() {
+                return this.brand;
+            },
+            get getColor() {
+                return this.color;
+            },
+
+            set setBrand(newBrand) {
+                this.brand = newBrand;
+            },
+            set setColor(newColor) {
+                this.color = newColor;
+            }
+        };
+        document.write("Car Brand: " + car.brand + "<br>Car Color: " + car.color);
+        car.setBrand = "Tesla";
+        car.setColor = "Red";
+        document.write("<br><br>Car Brand: " + car.brand + "<br>Car Color: " + car.color);
+    </script>
+</body>
+
+</html>
