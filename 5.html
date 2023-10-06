@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Write a JavaScript program that will display list of student in ascending order
+    according to the marks & calculate the average performance of the class.
+
+    <script>
+        var students = [["Amit",70],["Sumit",78],["Abhishek",71]];
+        var avgmarks = 0;
+        for(var i = 0; i < students.length; i++)
+        {
+            avgmarks = avgmarks + students[i][1];
+            for(var j = i + 1; j < students.length; j++)
+            {
+                if(students[i]>students[j])
+                {
+                    a = students[i];
+                    students[i] = students[j];
+                    students[j] = a;
+                }
+            }
+        }
+
+        var avg = avgmarks/students.length;
+        document.write("Average grade:"+avgmarks/students.length+"<br>");
+
+        for(var i = 0; i < students.length; i++)
+        {
+            document.write(students[i]+"<br>");
+        }
+    </script>
+</body>
+
+</html>
