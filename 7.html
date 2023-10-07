@@ -9,8 +9,45 @@
 
 <body>
     <script>
-        
+        function submit() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var pin = Number(document.getElementById("pin").value);
+            if (name.length == 0 || email.length == 0 || pin.length == 0) {
+                alert("Please enter value in all fields.")
+            }
+            else {
+                var pinpattern = /^[4]{1}[0-9]{5}$/;
+                if (pinpattern.test(pin)) {
+                    alert("Perfect Pin code");
+                }
+                else {
+                    alert("Wrong Pin code.");
+                }
+            }
+        }
+
     </script>
+    <table>
+        <tbody>
+            <tr>
+                <td>Name : </td>
+                <td> <input type="text" id="name" required></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td> <input type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>Pin code : </td>
+                <td> <input type="number" id="pin" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="submit()">Submit</button></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
