@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        firstName: "Monica",
+        get getName() {
+          return this.firstName;
+        },
+        set setName(newName) {
+          this.firstName = "hii";
+        },
+      };
+
+      document.write(student.getName + "<br>");
+      document.write((student.newName = "Sarah"));
+    </script>
+  </body>
+</html>
