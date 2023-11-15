@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="images/img1.jpg" id="img" height="50%" width="70%" /><br />
+    <input type="button" value="Previous" onclick="slideShow(-1)" />
+    <input type="button" value="Next" onclick="slideShow(1)" />
+
+    <script>
+      var pics = [
+        "images/img1.jpg",
+        "images/img2.jpg",
+        "images/img3.jpg",
+        "images/img4.jpg",
+      ];
+      var count = 0;
+      function slideShow(ststus) {
+        count = count + ststus;
+        if (count > pics.length - 1) {
+          count = 0;
+        }
+        if (count < 0) {
+          count = pics.length - 1;
+        }
+        document.getElementById("img").src = pics[count];
+      }
+    </script>
+  </body>
+</html>
