@@ -7,7 +7,7 @@
 </head>
 <body onload="rotate()">
     <a id="link">
-        <img src="images/img1.jpg" id="img" height="100%" width="100%">
+        <img src="images/img1.jpg" id="img" height="50%" width="50%">
     </a>
     
     <script>
@@ -17,14 +17,18 @@
             ["images/img3.jpg", "http://www.snapchat.com"]
         ];
         var count = 0;
+        setInterval(rotate, 3000);
         function rotate(){
             count ++;
-            if(count == pics.length-1) {
+            if(count > pics.length-1) {
                 count = 0;
             }
             document.getElementById("img").src = pics[count][0];
-            document.getElementById("link").src = pics[count][1];
+            document.getElementById("link").href = pics[count][1];
+            
         }    
+
+    
         </script>
 </body>
 </html>
