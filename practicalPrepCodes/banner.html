@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body onload="rotate()">
+  </head>
+  <body onload="rotate()">
     <a id="link">
-        <img src="images/img1.jpg" id="img" height="50%" width="50%">
+      <img src="images/img1.jpg" id="img" height="50%" width="50%" />
     </a>
-    
-    <script>
-        var pics = [
-            ["images/img1.jpg", "http://www.google.com"],
-            ["images/img2.jpg", "http://www.instagram.com"],
-            ["images/img3.jpg", "http://www.snapchat.com"]
-        ];
-        var count = 0;
-        setInterval(rotate, 3000);
-        function rotate(){
-            count ++;
-            if(count > pics.length-1) {
-                count = 0;
-            }
-            document.getElementById("img").src = pics[count][0];
-            document.getElementById("link").href = pics[count][1];
-            
-        }    
 
-    
-        </script>
-</body>
+    <script>
+      var pics = [
+        ["images/img1.jpg", "http://www.google.com"],
+        ["images/img2.jpg", "http://www.instagram.com"],
+        ["images/img3.jpg", "http://www.snapchat.com"],
+      ];
+      var count = 0;
+      setInterval(rotate, 3000);
+      function rotate() {
+        count++;
+        if (count > pics.length - 1) {
+          count = 0;
+        }
+        document.getElementById("img").src = pics[count][0];
+        document.getElementById("link").href = pics[count][1];
+      }
+    </script>
+  </body>
 </html>
