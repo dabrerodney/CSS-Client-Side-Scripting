@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+    <p id="6"></p>
+    <p id="7"></p>
+    <p id="8"></p>
+    <script>
+        var planet = ["Earth", "Mars", "Jupiter", "Venus"];
+        document.getElementById("1").innerHTML = planet.toString();
+
+        //1. join function
+        document.getElementById("2").innerHTML = planet.join("*");
+
+        //2. pop function (This method is used to remove elements from the end of the array)
+        document.getElementById("3").innerHTML = planet.pop();
+
+        //3. push function (This method is used to dd elements at the end of the array)
+        planet.push("pluto")
+        // document.getElementById("4").innerHTML = planet;
+        document.write(planet);
+        
+        //4. shift function (This method is used to remove elements from the beginning of the array )
+        planet.shift(" ");
+        document.getElementById("4").innerHTML = planet;
+
+        //5. unshift function (This method is used to add elements to the front of the array)
+        planet.unshift("Jupiter ");
+        document.getElementById("5").innerHTML = planet;
+
+        //6. splice function [to add]
+        planet.splice(1,0,"Alpha","Beta");
+        document.getElementById("6").innerHTML = planet;
+        // [to delete]
+        planet.splice(0,1);
+        document.getElementById("7").innerHTML = planet;
+    </script>
+</body>
+</html>
