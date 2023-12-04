@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodney Dabre</title>
+  </head>
+  <body>
+    Features of javascript 1. Case Sensative. 2. Light Weight. 3. Platform Independent. 4. Event Handling. 5. Client side validations 
+    
+    Datatypes in javascript 
+    Primitive datatype                      Non-primitive datatype 
+    1. String.                              1. Object.
+    2. Number.                              2. Array. 
+    3. Boolean.                             3. RegExp   
+    4. Undefined. 
+    5. Null.
+    <script>
+      const student = {
+        firstName: "John",
+        lastName: "Doe",
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName(name) {
+          const parts = name.split(" ");
+          this.firstName = parts[0];
+          this.lastName = parts[1];
+        },
+      };
+
+      document.write("<br>"+student.fullName); // "John Doe"
+
+      student.fullName = "Jane Smith";
+      document.write("<br>"+student.firstName); // "Jane"
+      document.write("<br>"+student.lastName); // "Smith"
+    </script>
+  </body>
+</html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <p id="1"></p>
     <p id="2"></p>
     <p id="3"></p>
@@ -15,34 +15,35 @@
     <p id="7"></p>
     <p id="8"></p>
     <script>
-        var planet = ["Earth", "Mars", "Jupiter", "Venus"];
-        document.getElementById("1").innerHTML = planet.toString();
+      // rodney dabre 1805
+      var planet = ["Earth", "Mars", "Jupiter", "Venus"];
+      document.getElementById("1").innerHTML = planet.toString(); //Earth,Mars,Jupiter,Venus
 
-        //1. join function
-        document.getElementById("2").innerHTML = planet.join("*");
+      //1. join function
+      document.getElementById("2").innerHTML = planet.join("*"); //Earth*Mars*Jupiter*Venus
 
-        //2. pop function (This method is used to remove elements from the end of the array)
-        document.getElementById("3").innerHTML = planet.pop();
+      //2. pop function (This method is used to remove elements from the end of the array)
+      document.getElementById("3").innerHTML = planet.pop(); //Venus
 
-        //3. push function (This method is used to dd elements at the end of the array)
-        planet.push("pluto")
-        // document.getElementById("4").innerHTML = planet;
-        document.write(planet);
-        
-        //4. shift function (This method is used to remove elements from the beginning of the array )
-        planet.shift(" ");
-        document.getElementById("4").innerHTML = planet;
+      //3. push function (This method is used to dd elements at the end of the array)
+      planet.push("pluto");
+      // document.getElementById("4").innerHTML = planet;
+      document.write(planet); //Mars,Jupiter,pluto
 
-        //5. unshift function (This method is used to add elements to the front of the array)
-        planet.unshift("Jupiter ");
-        document.getElementById("5").innerHTML = planet;
+      //4. shift function (This method is used to remove elements from the beginning of the array )
+      planet.shift(" ");
+      document.getElementById("4").innerHTML = planet; //Jupiter ,Mars,Jupiter,pluto
 
-        //6. splice function [to add]
-        planet.splice(1,0,"Alpha","Beta");
-        document.getElementById("6").innerHTML = planet;
-        // [to delete]
-        planet.splice(0,1);
-        document.getElementById("7").innerHTML = planet;
+      //5. unshift function (This method is used to add elements to the front of the array)
+      planet.unshift("Jupiter ");
+      document.getElementById("5").innerHTML = planet; //Jupiter ,Alpha,Beta,Mars,Jupiter,pluto
+
+      //6. splice function [to add]
+      planet.splice(1, 0, "Alpha", "Beta");
+      document.getElementById("6").innerHTML = planet; //Alpha,Beta,Mars,Jupiter,pluto
+      // [to delete]
+      planet.splice(0, 1);
+      document.getElementById("7").innerHTML = planet; //Earth,Mars,Jupiter,pluto
     </script>
-</body>
+  </body>
 </html>
