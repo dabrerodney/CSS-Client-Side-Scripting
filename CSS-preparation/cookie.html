@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="" name="myForm">
-        Name: <input type="text" name="name"/><br>
-        Email: <input type="text" name="email"/><br>
-        Language: <input type="text" name="lang"/><br>
-        <input type="button" value="Set Cookies" onclick="setCookie()">
-        <input type="button" value="Get Cookies" onclick="getCookie()">
+      Name: <input type="text" name="name" /><br />
+      Email: <input type="text" name="email" /><br />
+      Language: <input type="text" name="lang" /><br />
+      <input type="button" value="Set Cookies" onclick="setCookie()" />
+      <input type="button" value="Get Cookies" onclick="getCookie()" />
     </form>
 
     <script>
-        function setCookie() {
-            document.cookie = "Name:" + document.myForm.name.value;
-            document.cookie = "Email:" + document.myForm.email.value;
-            document.cookie = "Language:" + document.myForm.lang.value;
-            document.write(cookie);
-        }
+      function setCookie() {
+        document.cookie = "Name:" + document.myForm.name.value;
+        document.cookie = "Email:" + document.myForm.email.value;
+        document.cookie = "Language:" + document.myForm.lang.value;
+        document.write(cookie);
+      }
     </script>
-</body>
+  </body>
 </html>
