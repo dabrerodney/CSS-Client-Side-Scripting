@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var text1 = "hello";
+      var text2 = "world";
+      var text3 = "     JavaScript    ";
+
+      // concatenating two strings
+      var result1 = text1.concat(" ", text2);
+      document.writeln(result1 + "<br>"); // "hello world"
+
+      // converting the text to uppercase
+      var result2 = text1.toUpperCase();
+      document.writeln(result2 + "<br>"); // HELLO
+
+      // removing whitespace from the string
+      var result3 = text3.trim();
+      document.writeln(result3 + "<br>"); // JavaScript
+
+      // converting the string to an array
+      var result4 = text1.split();
+      document.writeln(result4 + "<br>"); // ["hello"]
+
+      // slicing the string
+      var result5 = text1.slice(1, 3);
+      document.writeln(result5 + "<br>"); // "el"
+
+      //length of the string
+      document.write(text1.length + "<br>"); //5
+    </script>
+  </body>
+</html>

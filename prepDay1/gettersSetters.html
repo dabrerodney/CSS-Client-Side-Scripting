@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters program</title>
+</head>
+<body>
+    <script>
+
+       var student = {
+        fname : " ",
+        lname : " ",
+
+        set fullname(cname){
+            this.fname = cname.split(" ")[0];
+            this.lname = cname.split(" ")[1];
+        },
+
+        get fullname(){
+            return this.fname + this.lname;
+        }
+       }
+
+       student.fullname = "Rodney Dabre";
+       x = (student.fullname);
+       document.write(x);
+
+    </script>
+</body>
+</html>
