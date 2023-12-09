@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      let colors = ["green", "blue", "red", "yellow", "black", "white"];
+      let flowers = ["rose", "lily", "jasmine", "lotus"];
+
+        //Array length method is used to find the lengtn of the array
+      document.writeln("<br>"+colors.length);
+
+      // Array tostring method is uded to convert arraay to string
+      let str = colors.toString();
+      document.writeln("<br>"+str)
+
+        // Array join method is used to join a value
+      document.writeln("<br>"+colors.join('|'));
+
+      // array concat method is used to join two or more than two strings
+      document.writeln("<br>"+colors.concat(flowers));
+
+      // this method is used to join an element at the end of the array
+      colors.push("brown");
+      document.write("<br>"+colors);
+
+      // this method is used to remove element at the end of array
+      document.write("<br>"+colors.pop());
+
+      // this method is used to add elements at the beginning of the array
+      flowers.unshift("yellow")
+      document.write("<br>"+flowers);
+
+      // used to delete element at the beginning
+      document.write("<br>"+flowers.shift());
+    </script>
+  </body>
 </html>
