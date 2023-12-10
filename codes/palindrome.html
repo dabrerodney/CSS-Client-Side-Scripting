@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter the string to check:
+    <input type="text" id="demo" /><br />
+
+    <input type="button" value="Check" onclick="check()" />
+    <p id="content"></p>
+
+    <script>
+      function check() {
+        var str = document.getElementById("demo").value;
+
+        if (str == null || str == "") {
+          document.getElementById("content").innerHTML =
+            "Please enter the string first";
+        } else if (str == str.toLocaleLowerCase().split("").reverse().join("")) {
+          document.getElementById("content").innerHTML =
+            "Entered string is palindrome";
+        } else {
+          document.getElementById("content").innerHTML =
+            "Entered string is not palindrome";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="first" align="center">
+      <label for="first1">Enter the User Id</label>
+      <input type="text" id="first1" />
+    </div>
+    <br />
+    <div id="Second" align="center">
+      <label for="Second2">Enter the Password</label>
+      <input type="text" id="Second2" /><br /><br />
+      <button id="bt1" onclick="check()">Login</button>
+    </div>
+    <script>
+      function check() {
+        var a = document.getElementById("first1").value;
+        var b = document.getElementById("Second2").value;
+        var msg = "Login Sucessful";
+        switch (a) {
+          case "user":
+            if (b == "121") break;
+          case "user2":
+            if (b == "122") break;
+          case "user3":
+            if (b == "123") break;
+          case "user4":
+            if (b == "124") break;
+          case "user5":
+            if (b == "125") break;
+          default:
+            msg = "Login unsucessful";
+        }
+        alert(msg);
+      }
+    </script>
+  </body>
+</html>
