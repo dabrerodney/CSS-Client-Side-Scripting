@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function MySelection(val) {
+        with (document.forms.myform) {
+          if (val == 1) {
+            choices[0].text = "Mango";
+            choices[0].value = 1;
+            choices[1].text = "Orange";
+            choices[1].value = 2;
+            choices[2].text = "Banana";
+            choices[2].value = 3;
+          }
+          if (val == 2) {
+            choices[0].text = "Rose";
+            choices[0].value = 1;
+            choices[1].text = "Jasmine";
+            choices[1].value = 2;
+            choices[2].text = "Lotus";
+            choices[2].value = 3;
+          }
+          if (val == 3) {
+            choices[0].text = "Red";
+            choices[0].value = 1;
+            choices[1].text = "Green";
+            choices[1].value = 2;
+            choices[2].text = "Blue";
+            choices[2].value = 3;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h4>Select the Desired Category</h4>
+    <form name="myform">
+      <input
+        type="radio"
+        name="items"
+        checked="true"
+        value="1"
+        onclick="MySelection(this.value)"
+      />Fruit
+      <input
+        type="radio"
+        name="items"
+        value="2"
+        onclick="MySelection(this.value)"
+      />Flower
+      <input
+        type="radio"
+        name="items"
+        value="3"
+        onclick="MySelection(this.value)"
+      />Colour <br /><br />
+      <select name="choices">
+        <option value="1">Mango</option>
+        <option value="2">Orange</option>
+        <option value="3">Banana</option>
+      </select>
+    </form>
+  </body>
+</html>
