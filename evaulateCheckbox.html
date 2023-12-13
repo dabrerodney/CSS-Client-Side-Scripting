@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Select the below option <br>
+    <input type="checkbox" name="group1" id="g1" value="Fruits" onclick="change(this)">Fruits <br>
+    <input type="checkbox" name="group1" id="g1" value="Vegetables" onclick="change(this)">Vegetables <br>
+    <input type="checkbox" name="group1" id="g1" value="City" onclick="change(this)">City <br>
+    <p id="demo"></p>
+    <script>
+        function change(value){
+            var val = value.value
+            if(value.checked){
+                document.getElementById("demo").innerHTML = "You selected = "+val
+            }else{
+                document.getElementById("demo").innerHTML = "Select something"
+            }
+        }
+
+        
+    </script>
+
+    <script>
+        var a=prompt('Enter a number');
+var b=parseInt(prompt('Enter a number'));
+document.write(typeof a+"<br>");
+document.write(typeof b);
+
+
+        var a = prompt("Enter a string");
+        var b = a.charAt(0);
+        var patt = /^[A-Z]/
+        if(patt.test(b)){
+            document.write("entered char is in uppercase")
+        }else{
+            document.write("entered char is not in uppercase")
+        }
+    </script>
+</body>
+</html>

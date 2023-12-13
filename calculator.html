@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="demo">
+      Enter first number: <input type="text" id="1" /><br />
+      Enter second number: <input type="text" id="2" /><br />
+      Result: <input type="text" id="3" /><br />
+      <input type="button" value="Addition" onclick="add()" />
+      <input type="button" value="Subtraction" onclick="sub()" /><br />
+      <input type="button" value="Multiplication" onclick="mul()" />
+      <input type="button" value="Division" onclick="div()" />
+    </form>
+
+    <script>
+        add = () => {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = a + b;
+            document.getElementById("3").value = c;
+        }
+
+        sub = () => {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = a - b;
+            document.getElementById("3").value = c;
+        }
+
+        mul = () => {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = a * b;
+            document.getElementById("3").value = c;
+        }
+
+        div = () => {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = a / b;
+            document.getElementById("3").value = c;
+        }
+    </script>
+  </body>
+</html>

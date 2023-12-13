@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter the name of the cookie : <input type="text" id="demo" /> <br />
+    Enter the value of the cookie : <input type="text" id="demo2" /> <br />
+
+    <input type="button" value="Set Cookie" onclick="set()" />
+    <input type="button" value="Read Cookie" onclick="read()" />
+    <input type="button" value="Update Cookie" onclick="update()" />
+    <input type="button" value="Delete Cookie" onclick="Delete()" />
+
+    <script>
+      set = () => {
+        var name = document.getElementById("demo").value;
+        var value = document.getElementById("demo2").value;
+
+        document.cookie = name + "=" + value;
+        alert("Cookie Created Successfully");
+      };
+
+      read = () => {
+        alert("All Cookies = " + document.cookie);
+      };
+
+      update = () => {
+        var name = document.getElementById("demo").value;
+        var value = document.getElementById("demo2").value;
+
+        document.cookie = name + "=" + value;
+        alert("Cookie Updated Successfully");
+      };
+
+      Delete = () => {
+        var name = document.getElementById("demo").value;
+        var value = document.getElementById("demo2").value;
+
+        document.cookie =
+          name + "=" + value + ";" + "expires = Thu, 01-Jan-1999 00:00:01 GMT";
+        alert("Cookie Deleted Successfully");
+      };
+    </script>
+  </body>
+</html>

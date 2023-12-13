@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="rotate()">
+    <a href="" id="link">
+        <img src="images/img1.jpg" id="img" width="50%" height="50%">
+    </a>
+
+    <script>
+        var pics = [
+            ["images/img1.jpg","https://www.google.com"],
+            ["images/img2.jpg","https://www.instagram.com"],
+            ["images/img3.jpg","https://www.youtube.com/"]
+        ];
+        var count = 0;
+        setInterval("rotate()",2000);
+
+        rotate = () => {
+            count++;
+            if(count>pics.length-1)
+            {
+                count = 0;
+            }
+            document.getElementById("img").src = pics[count][0];
+            document.getElementById("link").href = pics[count][1];
+    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = new Array();
+        var arr2 = [10,2,20,30,20,50,50,60,60];
+        var count = 0;
+
+        for(var i=0; i<arr2.length; i++){
+            var duplicate = false;
+            for(var j=i+1; j<arr2.length; j++){
+                if(arr2[i] == arr2[j]){
+                    duplicate = true;
+                }
+            }
+    
+
+        if(duplicate){
+            if(!arr1.includes(arr2[i])){
+                arr1.push(arr2[i])
+                count++;
+            }
+        }
+    }
+        document.write("No of duplicate elements = "+count+"<br>");
+        document.write(arr1.toString());
+    </script>
+</body>
+</html>

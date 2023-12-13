@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter the number :
+    <input type="text" id="demo" /><br />
+    <input type="button" value="Check" onclick="check()" /><br />
+    <p id="content"></p>
+
+    <script>
+      check = () => {
+        var num = document.getElementById("demo").value;
+        var i,
+          flag = true;
+
+        for (i = 2; i < num - 1; i++) {
+          if (num % i == 0) {
+            flag = false;
+            break;
+          }
+        }
+
+        if (flag == true) {
+          document.getElementById("content").innerHTML = "Entered no is prime";
+        } else {
+          document.getElementById("content").innerHTML =
+            "Entered no is not prime";
+        }
+      };
+    </script>
+  </body>
+</html>

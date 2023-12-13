@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Select some option <br>
+    <input type="radio" name="rb" id="r1" value="fruits" onclick="change(this)">Fruits
+    <input type="radio" name="rb" id="r1" value="Mango" onclick="change(this)">Mango
+    <input type="radio" name="rb" id="r1" value="Banana" onclick="change(this)">Banana
+    <input type="radio" name="rb" id="r1" value="Papaya" onclick="change(this)">Papaya
+    <p id="demo"></p>
+    <script>
+        change = (value) => {
+            val = value.value;
+            if(value.checked){
+                document.getElementById("demo").innerHTML = "You have selected"
+            }
+        }
+    </script>
+</body>
+</html>

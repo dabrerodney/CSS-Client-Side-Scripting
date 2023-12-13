@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter the username : <input type="text" id="demo" /> <br>
+    Enter the password :<input type="password" id="demo2" /><br>
+    <input type="button" value="Verify" onclick="verify()" /><br>
+    <p id="content"></p>
+
+    <script>
+      verify = () => {
+        var a = document.getElementById("demo").value;
+        var b = document.getElementById("demo2").value;
+
+        var msg = "Login Successful";
+
+        switch (a) {
+          case "user123":
+            if (b == "123") break;
+          case "user1234":
+            if (b == "1234") break;
+          case "user12345":
+            if (b == "12345") break;
+          case "user123456":
+            if (b == "123456") break;
+          case "user1234567":
+            if (b == "123457") break;
+          default:
+            msg = "Login unsuccessful";
+        }
+
+        document.getElementById("content").innerHTML = msg;
+      };
+    </script>
+  </body>
+</html>

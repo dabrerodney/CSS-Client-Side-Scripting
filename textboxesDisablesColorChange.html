@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        <label id="l1">Enter your First name: <input type="text" id="fname"></label><br>
+        <label id="l2">Enter your Second name: <input type="text" id="mname"></label><br>
+        <label id="l3">Enter your Last name: <input type="text" id="lname"></label><br>
+
+        <input type="button" value="Click" onclick="click()">
+    </form>
+
+    <script>
+        click = () => {
+            with(document.form.myForm){
+                fname.disabled=true;
+                mname.disabled=true;
+                lname.disabled=true;
+
+                fname.style=("color:red");
+                mname.style=("color:red");
+                lname.style=("color:red");
+
+                l1.style=("color:red");
+                l2.style=("color:red");
+                l3.style=("color:red");
+            }
+        }
+    </script>
+</body>
+</html>

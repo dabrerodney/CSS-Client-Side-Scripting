@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locking the Right Mouse Button</title>
+    <script language="JavaScript">
+      function RightClickDisable() {
+      alert('Not allowed to right click');
+      return false;
+      }
+      function InternetExploreBrowser() {
+      if (event.button == 2) {
+      RightClickDisable();
+      return false
+      }
+      }
+      document.oncontextmenu = new Function("RightClickDisable();return false")
+    </script>
+  </head>
+  <body>
+    <h1>This is a sample web page</h1>
+    <h4>Test disability of right click button by clicking right button</h4>
+  </body>
+</html>
