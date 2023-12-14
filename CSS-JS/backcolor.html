@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set Background Color</title>
+    <script>
+       function setbackgroundcolor(){
+        var color=prompt("Enter Color name to Set Background Color");  
+        if(color!=null || color!=""){
+        document.body.style.backgroundColor=color.toLocaleLowerCase();
+       }
+       }
+        // function changeBackgroundColor() {   
+        //     var colorName = prompt("Enter a color name (e.g., red, blue, green):");
+    
+        //     if (colorName !== null && colorName !== "") {
+
+        //         document.body.style.backgroundColor = colorName.toLowerCase();
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <h1>Set Background Color</h1>
+    <button onclick="setbackgroundcolor()">Set Background Color</button>
+</body>
+</html>

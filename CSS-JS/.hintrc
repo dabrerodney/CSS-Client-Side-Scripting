@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+<<<<<<< HEAD
+=======
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+>>>>>>> 25cb17ac91f29acfebb580ad3962d8362b6a612b
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ],
+<<<<<<< HEAD
+    "meta-viewport": "off"
+=======
+    "button-type": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ]
+>>>>>>> 25cb17ac91f29acfebb580ad3962d8362b6a612b
+  }
+}
